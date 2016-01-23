@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/beaglebone-rails.svg)](https://badge.fury.io/rb/beaglebone-rails)
 [![Build Status](https://travis-ci.org/DivXZero/beaglebone-rails.svg?branch=master)](https://travis-ci.org/DivXZero/beaglebone-rails)
 
 # Beaglebone::Rails
