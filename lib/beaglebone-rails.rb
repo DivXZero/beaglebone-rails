@@ -1,0 +1,2 @@
+
+require 'beaglebone/rails'
