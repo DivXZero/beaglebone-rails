@@ -1,6 +1,6 @@
 
+require 'beaglebone/GPIO/GPIO'
 require 'beaglebone/version'
-require 'beaglebone/GPIO'
 
 module Beaglebone
 
