@@ -2,12 +2,16 @@
 module Beaglebone
   module GPIO
     def self.list
-      str = File.open('/sys/class/gpio').read
-      str.gsub! "\n", ','
+      gpio_array = Dir.entries('/sys/class/gpio')
+      #gpio_array.remove('.')
+      #gpio_array.remove('..')
 
-      str.gsub! '\n', ',' unless str.split(',').include?('export')
+      #str = File.open('/sys/class/gpio').read
+      #str.gsub! "\n", ','
 
-      str.split(',')
+      #str.gsub! '\n', ',' unless str.split(',').include?('export')
+
+      #str.split(',')
     end
   end
 end
