@@ -5,7 +5,7 @@ require 'beaglebone/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "beaglebone-rails"
-  spec.version       = Beaglebone::Rails::VERSION
+  spec.version       = Beaglebone::VERSION
   spec.authors       = ["Nicholaus Brabant"]
   spec.email         = ["nicholaus.brabant@gmail.com"]
 
