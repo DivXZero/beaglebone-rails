@@ -5,9 +5,7 @@ module Beaglebone
       str = File.open('/sys/class/gpio')
       str.gsub! "\n", ','
 
-      if !str.split(',').include?('export')
-        str.gsub! '\n', ','
-      end
+      str.gsub! '\n', ',' unless str.split(',').include?('export')
 
       str.split(',')
     end
