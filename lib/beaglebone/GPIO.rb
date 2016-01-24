@@ -1,6 +1,14 @@
 
 module Beaglebone
   module GPIO
+
+    # Returns an array of active GPIO pins
+    #
+    # @param [Bool] optional List all active pins including export and unexport utilites
+    #
+    # @example Return all active GPIO pins
+    #   Beaglebone::GPIO.list #=> ["gpiochip32", "gpiochip64", "gpiochip96", "gpiochip0"]
+    #
     def self.list(list_all = false)
       gpio_array = Dir.entries('/sys/class/gpio')
       gpio_array.delete('.')
@@ -13,5 +21,6 @@ module Beaglebone
 
       gpio_array
     end
+
   end
 end
