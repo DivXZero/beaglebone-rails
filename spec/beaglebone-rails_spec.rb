@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Beaglebone do
 
-  it 'says hello' do
+  it 'says hello!' do
     expect(Beaglebone.hello).to eq('Hello!')
   end
 
