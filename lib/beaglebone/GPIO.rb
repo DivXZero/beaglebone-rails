@@ -7,6 +7,7 @@ module Beaglebone
 
       if !str.split(',').include?('export')
         str.gsub! '\n', ','
+      end
 
       str.split(',')
     end
