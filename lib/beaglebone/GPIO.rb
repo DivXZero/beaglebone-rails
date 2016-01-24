@@ -6,7 +6,7 @@ module Beaglebone
       gpio_array.delete('.')
       gpio_array.delete('..')
 
-      if !list_all?
+      unless list_all == true
         gpio_array.delete('export')
         gpio_array.delete('unexport')
       end
