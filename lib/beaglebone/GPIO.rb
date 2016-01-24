@@ -2,7 +2,9 @@
 module Beaglebone
   module GPIO
     def self.list
-      `ls /sys/class/gpio/`.split('\n')
+      str = `ls /sys/class/gpio/`
+      str.gsub! '\n', ','
+      str.split(',')
     end
   end
 end
