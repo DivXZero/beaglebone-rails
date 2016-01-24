@@ -1,5 +1,5 @@
 
-require 'beaglebone/version'
+require 'beaglebone'
 
 module Beaglebone
   def self.hello
