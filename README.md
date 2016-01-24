@@ -1,5 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/beaglebone-rails.svg)](https://badge.fury.io/rb/beaglebone-rails)
-[![Build Status](https://travis-ci.org/DivXZero/beaglebone-rails.svg?branch=master)](https://travis-ci.org/DivXZero/beaglebone-rails)
+[![Gem](https://img.shields.io/gem/v/beaglebone-rails.svg)]()
+[![Travis](https://img.shields.io/travis/DivXZero/beaglebone-rails.svg)]()
+[![Gemnasium](https://img.shields.io/gemnasium/DivXZero/beaglebone-rails.svg)]()
 
 # Beaglebone::Rails
 
