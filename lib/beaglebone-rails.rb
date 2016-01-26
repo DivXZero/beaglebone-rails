@@ -1,5 +1,6 @@
 
 require 'beaglebone/GPIO/GPIO'
+require 'beaglebone/GPIO/pins'
 require 'beaglebone/version'
 
 module Beaglebone
