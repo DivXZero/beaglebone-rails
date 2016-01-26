@@ -1,6 +1,6 @@
 [![Gem](https://img.shields.io/gem/v/beaglebone-rails.svg)](https://rubygems.org/gems/beaglebone-rails)
 [![Travis](https://img.shields.io/travis/DivXZero/beaglebone-rails.svg)](https://travis-ci.org/DivXZero/beaglebone-rails)
-[![Coveralls](https://img.shields.io/coveralls/jekyll/jekyll.svg)](https://coveralls.io/github/DivXZero/beaglebone-rails)
+[![Coveralls](https://img.shields.io/coveralls/DivXZero/beaglebone-rails.svg)](https://coveralls.io/github/DivXZero/beaglebone-rails)
 [//]: [![Gemnasium](https://img.shields.io/gemnasium/DivXZero/beaglebone-rails.svg)](https://gemnasium.com/DivXZero/beaglebone-rails)
 
 # Beaglebone::Rails
