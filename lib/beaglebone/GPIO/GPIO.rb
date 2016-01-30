@@ -49,5 +49,9 @@ module Beaglebone
       return true
     end
 
+    def self.set_direction(pin, direction)
+      return true
+    end
+
   end
 end
