@@ -41,5 +41,13 @@ module Beaglebone
       return true
     end
 
+    def self.disable_pin(pin)
+      pin = PINS[pin]
+      unexport = File.open('/sys/class/gpio/unexport', 'w')
+      return false if pin.nil? or unexport.nil?
+      unexport.puts(pin)
+      return true
+    end
+
   end
 end
