@@ -50,6 +50,9 @@ module Beaglebone
     end
 
     def self.set_direction(pin, direction)
+      dir_file = File.open("/sys/class/gpio/gpio#{PINS[pin]}/direction", 'w')
+      return false if dir_file.nil?
+      dir_file.puts(DIRECTION[direction])
       return true
     end
 
