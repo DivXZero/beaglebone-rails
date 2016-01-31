@@ -40,6 +40,7 @@ module Beaglebone
       export = File.open('/sys/class/gpio/export', 'w')
       return false if pin.nil? or export.nil?
       export.puts(pin)
+      export.close
       return true
     end
 
@@ -57,6 +58,7 @@ module Beaglebone
       unexport = File.open('/sys/class/gpio/unexport', 'w')
       return false if pin.nil? or unexport.nil?
       unexport.puts(pin)
+      unexport.close
       return true
     end
 
@@ -74,6 +76,7 @@ module Beaglebone
       dir_file = File.open("/sys/class/gpio/gpio#{PINS[pin]}/direction", 'w')
       return false if dir_file.nil?
       dir_file.puts(DIRECTION[direction])
+      dir_file.close
       return true
     end
 
@@ -91,6 +94,7 @@ module Beaglebone
       mode = File.open("/sys/class/gpio/gpio#{PINS[pin]}/value", 'w')
       return false if mode.nil?
       mode.puts(VALUE[value])
+      mode.close
       return true
     end
 
