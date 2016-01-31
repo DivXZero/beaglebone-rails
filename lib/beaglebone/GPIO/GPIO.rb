@@ -88,7 +88,7 @@ module Beaglebone
     # @return [Boolean] Returns true for success, false otherwise
     #
     def self.set_value(pin, value)
-      mode = File.open("/sys/class/gpio/gpio#{PINS[pin]/value}", 'w')
+      mode = File.open("/sys/class/gpio/gpio#{PINS[pin]}/value", 'w')
       return false if mode.nil?
       mode.puts(VALUE[value])
       return true
