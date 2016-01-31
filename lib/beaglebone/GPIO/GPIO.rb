@@ -40,7 +40,7 @@ module Beaglebone
       export = File.open('/sys/class/gpio/export', 'w')
       return false if pin.nil? or export.nil?
       export.puts(pin)
-      export.close
+      #export.close
       return true
     end
 
@@ -58,7 +58,7 @@ module Beaglebone
       unexport = File.open('/sys/class/gpio/unexport', 'w')
       return false if pin.nil? or unexport.nil?
       unexport.puts(pin)
-      unexport.close
+      #unexport.close
       return true
     end
 
