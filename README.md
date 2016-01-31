@@ -24,6 +24,10 @@ Or install it yourself as:
 
     $ gem install beaglebone-rails
 
+Run the install script to create the rules that allow the gem to access the subsystem (Warning: This is currently insecure):
+
+    $ sudo ./install.sh
+
 ## Usage
 
 TODO: Write usage instructions here
