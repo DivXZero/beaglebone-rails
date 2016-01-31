@@ -71,7 +71,7 @@ module Beaglebone
     # @return [Boolean] Returns true for success, false otherwise
     #
     def self.set_direction(pin, direction)
-      dir_file = File.open("/sys/class/gpio/gpiochip#{PINS[pin]}/direction", 'w')
+      dir_file = File.open("/sys/class/gpio/gpio#{PINS[pin]}/direction", 'w')
       return false if dir_file.nil?
       dir_file.puts(DIRECTION[direction])
       return true
@@ -88,7 +88,7 @@ module Beaglebone
     # @return [Boolean] Returns true for success, false otherwise
     #
     def self.set_value(pin, value)
-      mode = File.open("/sys/class/gpio/gpiochip#{PINS[pin]/value}", 'w')
+      mode = File.open("/sys/class/gpio/gpio#{PINS[pin]/value}", 'w')
       return false if mode.nil?
       mode.puts(VALUE[value])
       return true
