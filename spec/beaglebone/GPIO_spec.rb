@@ -21,6 +21,10 @@ describe Beaglebone::GPIO do
     expect(Beaglebone::GPIO.set_direction(test_pin, :OUT)).to_not eq(false)
   end
 
+  xit 'has the ability to set pin value' do
+    expect(Beaglebone::GPIO.set_value(test_pin, :HIGH)).to_not eq(false)
+  end
+
   it 'has the ability to disable pins' do
     expect(Beaglebone::GPIO.disable_pin(test_pin)).to_not eq(false)
   end

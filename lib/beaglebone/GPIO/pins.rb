@@ -2,6 +2,7 @@
 module Beaglebone
   module GPIO
     DIRECTION = { :IN => 'in', :OUT => 'out', :LOW => 'in', :HIGH => 'out' }
+    VALUE = { :LOW => 0, :HIGH => 1, 0 => 0, 1 => 1 }
     PINS = {
       :P9_11 => 30, :P9_12 => 60,
       :P9_13 => 31, :P9_14 => 50,

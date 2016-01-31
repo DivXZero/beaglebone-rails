@@ -33,6 +33,8 @@ module Beaglebone
     # @example
     #   Beaglebone::GPIO.enable_pin(:P9_12)
     #
+    # @return [Boolean] Returns true for success, false otherwise
+    #
     def self.enable_pin(pin)
       pin = PINS[pin]
       export = File.open('/sys/class/gpio/export', 'w')
@@ -41,6 +43,15 @@ module Beaglebone
       return true
     end
 
+    # Disables a GPIO pin
+    #
+    # @param pin [Object] Specifies a value from GPIO::PINS
+    #
+    # @example
+    #   Beaglebone::GPIO.disable_pin(:P9_12)
+    #
+    # @return [Boolean] Returns true for success, false otherwise
+    #
     def self.disable_pin(pin)
       pin = PINS[pin]
       unexport = File.open('/sys/class/gpio/unexport', 'w')
@@ -49,10 +60,37 @@ module Beaglebone
       return true
     end
 
+    # Set pin direction
+    #
+    # @param pin [Object] Specifies a value from GPIO::PINS
+    # @param direction [Object] Specifies a value from GPIO::DIRECTION
+    #
+    # @example
+    #   Beaglebone::GPIO.set_direction(:P9_12, :OUT)
+    #
+    # @return [Boolean] Returns true for success, false otherwise
+    #
     def self.set_direction(pin, direction)
       dir_file = File.open("/sys/class/gpio/gpio#{PINS[pin]}/direction", 'w')
       return false if dir_file.nil?
       dir_file.puts(DIRECTION[direction])
+      return true
+    end
+
+    # Set pin value
+    #
+    # @param pin [Object] Specifies a value from GPIO::PINS
+    # @param value [Object] Specifies a value from GPIO::VALUE
+    #
+    # @example
+    #   Beaglebone::GPIO.set_value(:P9_12, :HIGH)
+    #
+    # @return [Boolean] Returns true for success, false otherwise
+    #
+    def self.set_value(pin, value)
+      mode = File.open("/sys/class/gpio/gpio#{PINS[pin]/value}", 'w')
+      return false if mode.nil?
+      mode.puts(VALUE[value])
       return true
     end
 
