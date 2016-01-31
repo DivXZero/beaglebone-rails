@@ -17,7 +17,7 @@ describe Beaglebone::GPIO do
     expect(Beaglebone::GPIO.enable_pin(test_pin)).to_not eq(false)
   end
 
-  it 'has the ability to set pin direction' do
+  xit 'has the ability to set pin direction' do
     expect(Beaglebone::GPIO.set_direction(test_pin, :OUT)).to_not eq(false)
   end
 
